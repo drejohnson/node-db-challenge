@@ -11,7 +11,8 @@ function findTasks(id) {
       "t.project_id"
     )
     .join("tasks as t", "t.project_id", "p.id")
-    .where({ project_id: id });
+    .where({ project_id: id })
+    .first();
 }
 
 function add(task, id) {

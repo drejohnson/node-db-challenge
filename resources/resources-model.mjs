@@ -5,7 +5,9 @@ function findResources() {
 }
 
 function findById(id) {
-  return db("resources").where({ id });
+  return db("resources")
+    .where({ id })
+    .first();
 }
 
 function add(resource) {

@@ -5,7 +5,9 @@ function findProjects() {
 }
 
 function findById(id) {
-  return db("projects").where({ id });
+  return db("projects")
+    .where({ id })
+    .first();
 }
 
 function add(project) {
